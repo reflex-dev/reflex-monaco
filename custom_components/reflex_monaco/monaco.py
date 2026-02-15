@@ -16,6 +16,10 @@ class MonacoComponent(rx.Component):
     # The theme to use for the editor.
     theme: rx.Var[str] = rx.color_mode_cond("light", "vs-dark")
 
+    # The options, refer to Monaco interface IStandaloneEditorConstructionOptions at
+    # https://microsoft.github.io/monaco-editor/docs.html#interfaces/editor.IStandaloneEditorConstructionOptions.html
+    options: rx.Var[dict]
+    
     # The line to jump to in the editor.
     line: rx.Var[int] = rx.Var.create(1)
 
